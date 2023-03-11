@@ -1,0 +1,30 @@
+.boton-clear{
+    background-color: #641919;
+    color: white;
+    height: 83px;
+    border: 2px solid white;
+    border-radius: 18px;
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.boton-clear:hover{
+    background-color: #741d1d;
+}
+@media screen and (max-width: 420px){
+    .boton-clear{
+        height: 65px;
+    }
+    .boton-clear:hover{
+        background-color: #641919;
+    }
+    .boton-clear:active, .boton-clear:focus{
+        background-color: #741d1d;
+    }
+}

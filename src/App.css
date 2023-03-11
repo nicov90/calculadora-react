@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+.App{
+    height: 100vh;
+    min-height: 800px;
+    max-height: 900px;
+    padding: 0 20px;
+    background-color: #1b1b32;
+    font-family: Lato, sans-serif;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.titulo-contenedor{
+    width: 100%;
+    height: 50px;
+    margin: 18px 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.titulo-contenedor > h1{
+    font-family: 'Tilt Neon', cursive;
+    font-size: 2.9rem;
+    background: linear-gradient(#ffffff 32%, #6ae1ff);
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    user-select: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.calculadora-contenedor{
+    min-width: 290px;
+    max-width: 400px;
+    width: 100%;
+    height: 650px;
+    padding: 14px;
+    background-color: #314b66;
+    border-radius: 20px;
+    border: 5px solid white;
 }
-
-.App-link {
-  color: #61dafb;
+.fila{
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fila.cinco{
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+}
+.fila.seis{
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+.fila.seis > .boton-contenedor:nth-child(2){
+    background-color: rgb(94, 50, 100);
+}
+.fila.seis > .boton-contenedor:nth-child(2):hover{
+    background-color: rgb(127, 71, 134);
+}
+footer > p{
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    padding: 15px 0;
+    color: rgba(255, 255, 255);
+    user-select: none;
+}
+@media screen and (max-width: 420px){
+    .App{
+        margin: 30px 0;
+        gap: 30px;
+        height: auto;
+        min-height: auto;
+    }
+    .titulo-contenedor{
+        margin: 0;
+    }
+    .calculadora-contenedor{
+        height: 550px;
+    }
+    .fila.seis > .boton-contenedor:nth-child(2):hover{
+        background-color: rgb(94, 50, 100);
+    }
+    .fila.seis > .boton-contenedor:nth-child(2):active,
+    .fila.seis > .boton-contenedor:nth-child(2):focus{
+        background-color: rgb(127, 71, 134);
+    }
 }

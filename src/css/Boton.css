@@ -1,0 +1,45 @@
+.boton-contenedor{
+    background-color: #1b1b32;
+    color: white;
+    height: 83px;
+    flex: 1 1;
+    border: 2px solid white;
+    border-radius: 18px;
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.boton-contenedor:hover{
+    background-color: #33435a;
+}
+.operador{
+    background-color: rgb(36, 119, 112);
+    color: white;
+}
+.operador:hover{
+    background-color: rgb(39, 145, 136);
+}
+@media screen and (max-width: 420px){
+    .boton-contenedor{
+        height: 62px;
+        font-size: 28px;
+    }
+    .boton-contenedor:hover{
+        background-color: #1b1b32;
+    }
+    .boton-contenedor:active, .boton-contenedor:focus{
+        background-color: #33435a;
+    }
+    .operador:hover{
+        background-color: rgb(36, 119, 112);
+    }
+    .operador:active, .operador:focus{
+        background-color: rgb(39, 145, 136);
+    }
+}
